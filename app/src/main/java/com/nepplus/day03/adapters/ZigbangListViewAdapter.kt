@@ -24,14 +24,14 @@ class ZigbangListViewAdapter(
         //컨버터 뷰가 그 화면에 보여주는 틀인데 없으면 만들어준다
         var tempRow = convertView
         if (tempRow == null) {
-            tempRow = LayoutInflater.from(mContext).inflate(R.layout.zigbang_list_item, null)
+            tempRow = LayoutInflater.from(mContext).inflate(resId, null)
         }
 
         //있다면 변수에 담아서
         var row = tempRow!!
 
         //그 아이템 안에 각각의 요소마다 정보를 넣어준다
-        row.zmoneyTxt.text = mList[position].money.toString()
+        row.zmoneyTxt.text = "${mList[position].money}천만원"
         row.zaddressTxt.text = mList[position].address
         row.zoptionTxt.text = mList[position].option
 
