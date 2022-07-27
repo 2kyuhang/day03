@@ -42,6 +42,7 @@ class MainActivity : AppCompatActivity() {
         //리스트 뷰 이벤트 처리
         mainListView.setOnItemClickListener { adapterView, view, position, l ->
             Toast.makeText(this, "${mStudentList[position].name}님 클릭됨", Toast.LENGTH_SHORT).show()
+
         }
 
         //롱 클릭시 이벤트 처리임// 잘 모르겠음
@@ -54,7 +55,7 @@ class MainActivity : AppCompatActivity() {
             mStudentListViewAdapter.notifyDataSetChanged()
 
             //true해야 좋음....자세한거는 애매함
-            return@setOnItemLongClickListener true  // true - 롱클릭 이벤트 처리만 하는 코드
+            return@setOnItemLongClickListener true
         }
 
     }
