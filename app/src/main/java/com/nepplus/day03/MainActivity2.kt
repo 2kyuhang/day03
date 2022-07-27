@@ -7,7 +7,7 @@ import com.nepplus.day03.adapters.StudentListViewAdapter
 import com.nepplus.day03.datas.StudentData
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity2 : AppCompatActivity() {
 
     //이건 데이터를 무더기로 저장하기 위한 것
     val mStudentList = ArrayList<StudentData>()
@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main2)
 
         //학생 더미 데이터
         mStudentList.add(StudentData("김민철", "서울시 서대문구", 1990))
