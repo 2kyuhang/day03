@@ -15,6 +15,7 @@ class StudentListViewAdapter(
     val mList : ArrayList<StudentData>
 ) : ArrayAdapter<StudentData>(mContext, resId, mList) {
 
+    //이게 계속 돌기때문에 position이 +1씩 오르는 것
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         //1 한 칸의 xml을 연결
         var tempRow = convertView
