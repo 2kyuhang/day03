@@ -15,7 +15,7 @@ class StudentListViewAdapter(
     val mList : ArrayList<StudentData>
 ) : ArrayAdapter<StudentData>(mContext, resId, mList) {
 
-    //이게 계속 돌기때문에 position이 +1씩 오르는 것
+    //position은 반복문처럼 돌아서 해당 인덱스를 준다
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         //1 한 칸의 xml을 연결
         var tempRow = convertView
@@ -30,9 +30,14 @@ class StudentListViewAdapter(
         //row.ageTxt.text = mList[position].birthYear.toString()
 
         //변수를 활용한 String 가공
-        val koreanAge = 2022 - mList[position].birthYear + 1
+        var koreanAge = 2022 - mList[position].birthYear + 1
+        //mList안에 StudentData가 리스트 형식으로 들어가 있어
+        //이렇게 꺼내 써야 한다!!
+        koreanAge = mList[position].getKoreanAge(2022).toInt()
         row.ageTxt.text = "(${koreanAge}세)"
         return row
     }
+
+
 
 }

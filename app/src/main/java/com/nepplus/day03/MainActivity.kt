@@ -5,11 +5,15 @@ import android.os.Bundle
 import android.widget.Toast
 import com.nepplus.day03.adapters.StudentListViewAdapter
 import com.nepplus.day03.datas.StudentData
+import com.nepplus.day03.datas.TestData
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
+    //이건 데이터를 무더기로 저장하기 위한 것
     val mStudentList = ArrayList<StudentData>()
+
+    //이건 어답터로 여기에 붙여넣을거다
     lateinit var mStudentListViewAdapter: StudentListViewAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -57,6 +61,6 @@ class MainActivity : AppCompatActivity() {
             //true해야 좋음....자세한거는 애매함
             return@setOnItemLongClickListener true
         }
-
+        val td1 = TestData()
     }
 }
