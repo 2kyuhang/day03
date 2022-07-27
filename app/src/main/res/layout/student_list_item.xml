@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:padding="10dp">
+    <!--아이템은 높이를 wrap_content 을 두면 좋다 -->
+    <!--그리고 대부분의 앱 특성상 가로로 horizontal 두면 좋다-->
+    <!--
+    android:gravity="center_vertical"
+    는 중앙으로 맞춰준다
+    -->
+    <ImageView
+        android:src="@mipmap/ic_launcher_round"
+        android:layout_width="80dp"
+        android:layout_height="80dp"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            >
+            <TextView
+                android:text="이름자리"
+                android:textSize="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/nameTxt"/>
+
+            <TextView
+                android:text="나이자리"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ageTxt"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:text="주소자리"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/addressTxt"
+            android:layout_margin="10dp"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>
