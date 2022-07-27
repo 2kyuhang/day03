@@ -24,6 +24,7 @@ class StudentListViewAdapter(
         }
         val row = tempRow!!
 
+
         //2 실제 데이터 반영
         row.nameTxt.text = mList[position].name
         row.addressTxt.text = mList[position].address
